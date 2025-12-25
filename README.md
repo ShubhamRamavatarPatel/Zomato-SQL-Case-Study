@@ -1,33 +1,48 @@
-# 🍽 Zomato SQL Case Study — Data Analysis Using SQL Server
-
-This repository contains a **real-world style SQL case study** based on a Zomato-like restaurant dataset.  
-The project focuses on extracting meaningful insights using **SQL Server (SSMS)**, including:
-user-defined functions, stored procedures, triggers, analytical queries, window functions, and reporting queries.
 
 ---
 
-## 📊 **Project Overview**
+## 🎯 Objectives & Insights
+This project answers important business questions such as:
 
-Restaurants generate large amounts of customer & business data such as ratings, cost, cuisine types, bookings, and reviews.  
-In this case study, we perform end-to-end analysis to answer business questions like:
-
-- Which restaurants perform best based on ratings?
-- What is the rating status category for each restaurant?
-- Top restaurant areas & cuisine preferences
-- How do rating trends affect customer choices?
-- Restaurant-wise and cuisine-wise analytical breakdown
-- Dynamic database operations using SPs, Views & Triggers
-
-This project simulates insights that Zomato or Swiggy might use to improve recommendations,
-marketing decisions, and business performance.
+- Categorizing restaurants based on ratings (Excellent / Good / Average / Bad)
+- Identifying top restaurant areas with highest ratings
+- Displaying cuisine trends and restaurant types
+- Creating views for top restaurants
+- Automatically logging messages when new records are inserted (Trigger)
+- Updating and rolling back data safely (Transactions)
+- Generating customized restaurant names using functions
 
 ---
 
-## 🗂 **Dataset Information**
+## 🛠 SQL Concepts Used
+| Concept | Usage |
+|---------|-------|
+| User-Defined Functions | Create customized values |
+| Stored Procedures | Reusable logic |
+| Views | Store top results |
+| Triggers | Message after insert |
+| Window Functions | Ranking & ordering |
+| Transactions | Update + rollback |
+| CASE statements | Rating classification |
 
-| File | Description |
-|------|------------|
-| `zomato_dataset.csv` | Contains restaurant data such as name, cuisine type, rating, cost, area & booking information |
-| `case_study_queries.sql` | Contains **all SQL queries**, including analytical insights, functions, procedures & triggers |
+---
 
-### **Dataset Columns**
+## 🧾 Sample Business Insights (Queries Included)
+
+- Top 5 highest-rated restaurant areas  
+- Rating status for each restaurant using `CASE`
+- Restaurant type total cost analysis using `ROLLUP`
+- Auto-message after insert using `TRIGGER`
+- Row numbering to find best performing locations
+- View storing top-rated restaurants for reporting
+
+> Full SQL script available in **`case_study_queries.sql`**
+
+---
+
+## 🚀 How to Run
+1. Install **SQL Server** or **SSMS**
+2. Create a database:
+```sql
+CREATE DATABASE ZomatoDB;
+USE ZomatoDB;
